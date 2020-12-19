@@ -36,9 +36,11 @@ Do the following:
 */
 
 let var1 = 10;
-const var2 = 20;
+let var2 = 20;
 
-var1 = var1 * var2;
+if (var1 < var2) {
+  var1 = var1 * var2
+}
 
 console.log(var1);
 
@@ -158,30 +160,30 @@ Use the game function below to do the following:
 let computersChoice = Math.floor(Math.random() * 3);
 
 if (computersChoice === 0){
-  computersChoice = "Rock"
+  computersChoice = "rock"
 } else if (computersChoice === 1) {
-  computersChoice = "Paper"
+  computersChoice = "paper"
 } else if (computersChoice === 2) {
-  computersChoice = "Scissors"
+  computersChoice = "scissors"
 }
 
 function game(user, computer){
-    if (user === "Scissors" && computer === "Paper") {
+    if (user === "scissors" && computer === "paper") {
       return "you win!"
-    } else if (user === "Paper" && computer === "Rock") {
+    } else if (user === "paper" && computer === "rock") {
       return "you win!"
-    } else if (user === "Rock" && computer === "Scissors") {
+    } else if (user === "rock" && computer === "scissors") {
       return "you win!"
-    } else if (user === "Paper" && computer === "Scissors") {
+    } else if (user === "paper" && computer === "scissors") {
       return "you lose!"
-    } else if (user === "Rock" && computer === "Paper") {
+    } else if (user === "rock" && computer === "paper") {
       return "you lose!"
-    } else if (user === "Scissors" && computer === "Rock") {
+    } else if (user === "scissors" && computer === "rock") {
       return "you lose!"
     } else return "it's a tie"
   }
 
-  console.log(game("Rock", computersChoice));
+  console.log(game("rock", computersChoice));
   
   
 
@@ -196,9 +198,10 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+function miles(kilometers){
+    return kilometers * 0.621371
   }
+  console.log(miles(5))
 
 
 
@@ -210,9 +213,10 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
+function feet(cm){
+    return cm / 30.48
   }
+  console.log(feet(2))
  
 
 
@@ -226,10 +230,28 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
+function annoyingSong(startNum){
+  while (startNum > 0) {
+    return startNum + " bottles of soda on the wall, " + startNum + " bottles of soda, take one down pass it around " + --startNum + " bottles of soda on the wall";
+    startNum;
   }
+}
+  console.log(annoyingSong(99));
 
+// HERE'S THE WHOLE SONG
+
+// function annoyingSong(startNum){
+//   while (startNum > 2) {
+//     console.log(startNum + " bottles of soda on the wall, " + startNum + " bottles of soda, take one down pass it around " + --startNum + " bottles of soda on the wall");
+//     startNum;
+//     } if (startNum === 2){
+//     console.log(startNum + " bottles of soda on the wall, " + startNum + " bottles of soda, take one down pass it around " + --startNum + " bottle of soda on the wall");
+//     startNum;
+//   } if (startNum === 1){
+//      console.log(startNum + " bottle of soda on the wall, " + startNum + " bottle of soda, take one down pass it around " + --startNum + " bottles of soda on the wall");
+//   }
+// }
+//   console.log(annoyingSong(99));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -246,9 +268,21 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
   
-function grade(/*Your Code here */){
-  /*Your Code here */
+function grade(score){
+  if (score >=90 && score <= 100) {
+    return "you got an A"
+  } else if (score >= 80 && score <= 89) {
+    return "you got a B"
+  } else if (score >= 70 && score <= 79) {
+    return "you got a C"
+  } else if (score >= 60 && score <= 69) {
+    return "you got a D"
+  } else if (score <60) {
+    return "you got an F"
+  } 
   }
+
+  console.log(grade(87));
   
   
 
@@ -264,10 +298,19 @@ Using the vowelCounter function below do the following:
   HINT - try looking up the .includes() method
 */
 
+const vowels = ["a", "e", "i", "o", "u"]
 
-function vowelCounter(/*add your code here*/) {
-    /*add your code here*/
-}
+function vowelCounter(string) {
+  let count = 0;
+  for (let letter of string.toLowerCase()) {
+    if (vowels.includes(letter)) {
+        count++;
+      }
+    }
+    return count
+  }
+
+  console.log(vowelCounter("Ambidextrous"))
 
 
 
