@@ -233,12 +233,22 @@ Using the annoyingSong function below do the following:
 function annoyingSong(startNum){
   while (startNum > 0) {
     return startNum + " bottles of soda on the wall, " + startNum + " bottles of soda, take one down pass it around " + --startNum + " bottles of soda on the wall";
-    startNum;
   }
 }
   console.log(annoyingSong(99));
 
-// HERE'S THE WHOLE SONG
+// I'm not sure if that's right.
+//I'm not too familiar with using while loops.
+//So here it is with a for loop.
+
+// function annoyingSong(startNum){
+//   for (let i = startNum; i > 0; i--) {
+//     return i + " bottles of soda on the wall, " + i + " bottles of soda, take one down pass it around " + --i + " bottles of soda on the wall";
+//   }
+// }
+//   console.log(annoyingSong(99));
+
+// AND HERE'S THE WHOLE SONG
 
 // function annoyingSong(startNum){
 //   while (startNum > 2) {
@@ -249,6 +259,8 @@ function annoyingSong(startNum){
 //     startNum;
 //   } if (startNum === 1){
 //      console.log(startNum + " bottle of soda on the wall, " + startNum + " bottle of soda, take one down pass it around " + --startNum + " bottles of soda on the wall");
+//   } if (startNum === 0){
+//      console.log(startNum + " bottles of soda on the wall, " + startNum + " bottles of soda. Go to the store and buy some more, 99 bottles of soda on the wall");
 //   }
 // }
 //   console.log(annoyingSong(99));
@@ -298,19 +310,19 @@ Using the vowelCounter function below do the following:
   HINT - try looking up the .includes() method
 */
 
-const vowels = ["a", "e", "i", "o", "u"]
+// const vowels = ["a", "e", "i", "o", "u"]
 
-function vowelCounter(string) {
-  let count = 0;
-  for (let letter of string.toLowerCase()) {
-    if (vowels.includes(letter)) {
-        count++;
-      }
-    }
-    return count
-  }
+// function vowelCounter(string) {
+//   let count = 0;
+//   for (let letter of string.toLowerCase()) {
+//     if (vowels.includes(letter)) {
+//         count++;
+//       }
+//     }
+//     return count
+//   }
 
-  console.log(vowelCounter("Ambidextrous"))
+//   console.log(vowelCounter("Ambidextrous"))
 
 
 
